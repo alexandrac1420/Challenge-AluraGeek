@@ -1,0 +1,199 @@
+.header{
+    background-color: #5300C8;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;  
+
+
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    flex-direction: column;
+    gap:20px;
+}
+
+
+.productos_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 400px; /* Altura fija para limitar el espacio ocupado */
+    padding: 10px;
+    overflow: hidden; /* Evita que el contenido desborde */
+}
+
+.productos_container p {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+}
+
+.formulario_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.formulario_container p {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formulario_container input {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-family: "IBM Plex Mono", serif;
+    border-color: #03318C;
+    border-style: solid;
+    border-width: 3px;
+    padding: 15px 10px;
+    color: #03318C; 
+    font-weight: bold;
+    font-size: 16;
+}
+
+.formulario_container input::placeholder {
+    color: #03318C; 
+    font-weight: bold;
+    font-size: 16;
+}
+
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.enviar{
+    background-color: #03318C;
+    width: 188px;
+    height: 55px;
+    border-radius: 15px;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-color: #03318C;
+    border-style: solid;
+    color:#FFFFFF;
+}
+
+.limpiar{
+    background-color: #FFFFFF;
+    width: 188px;
+    height: 55px;
+    border-radius: 15px ;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-color: #03318C;
+    border-style: solid;
+    color: #03318C;
+}
+
+
+.productos_container__lista {
+    display: flex;
+    flex-wrap: nowrap; /* Productos en una fila para scroll horizontal */
+    gap: 20px;
+    overflow-x: auto; /* Habilita desplazamiento horizontal por defecto */
+    height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+    padding-bottom: 10px; /* Espacio para el scroll */
+}
+
+.producto{
+    width: 196px;
+    height: 258px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: #000000;
+    border-style: solid;    
+    background-color: #5D04D9;
+    padding-top: 50px;
+}
+
+
+.producto__imagen{
+    position: relative;
+    left: 8.5%;
+    max-width: 150px;
+    max-height: 160px;
+    height: 174px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.producto p {
+    position: relative;
+    font-family: "IBM Plex Mono", serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+    left: 8.5%;
+}
+
+.caneca {
+    width: 20px;
+    padding-left: 160px;
+    padding-bottom: 40px;
+}
+
+
+.footer {
+    background-color: #5300C8;
+    font-family: "IBM Plex Mono", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.footer__primerParrafo {
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__segundoParrafo {
+    font-weight: 200;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width:760px){
+    .main_container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 20px 20px;
+        gap:50px;
+    }
+
+    .productos_container__lista {
+        flex-wrap: wrap; /* Permite varias filas para scroll vertical */
+        overflow-x: hidden; /* Desactiva scroll horizontal */
+        overflow-y: auto; /* Habilita desplazamiento vertical */
+        height: auto; /* Asegura que los productos sean visibles en su totalidad */
+        max-height: 400px; /* Limita la altura del contenedor */
+    }
+
+}
