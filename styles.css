@@ -1,10 +1,23 @@
+/* Eliminar márgenes y rellenos por defecto del body y html */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Asegurar que la página ocupe todo el espacio disponible */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+}
+
 .header{
     background-color: #5300C8;
     display: flex;
     justify-content: center;
     padding: 20px 20px;  
-
-
 }
 
 .main_container {
@@ -13,6 +26,7 @@
     padding: 20px 20px;
     flex-direction: column;
     gap:20px;
+    flex: 1;
 }
 
 
